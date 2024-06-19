@@ -1,0 +1,14 @@
+body {
+  background-color: peachpuff;
+}
+
+h1 {
+  color: salmon;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  color: white;
+  font-size: 20px;
+}
