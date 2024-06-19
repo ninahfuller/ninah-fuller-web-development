@@ -1,6 +1,7 @@
 body {
   background-color: peachpuff;
   margin: 5;  
+  
 }
 h1 {
   color: sienna;
@@ -16,4 +17,7 @@ p {
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
+}
+.p1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
