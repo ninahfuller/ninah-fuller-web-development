@@ -1,10 +1,7 @@
-body{
-  background-color: peachpuff;
-  margin: 5;  
-}
 html{
   background: url(website3.jpg) no-repeat center fixed; 
   background-size: cover;
+  margin: 4;
 }
 h1 {
   color: indianred;
