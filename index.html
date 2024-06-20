@@ -8,15 +8,39 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .container {
+      position: relative;
+    }
+    
+    .topleft {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-size: 18px;
+    }
+    
+    img { 
+      width: 100%;
+      height: auto;
+      opacity: 0.3;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Image Text</h2>
+    
+    <p>Add some text to an image in the top left corner:</p>
+    
+    <div class="container">
+      <img src="IMG_0010.jpg" alt="Me" width="1000" height="300">
+      <div class="topleft">Top Left</div>
+    </div>
 <body>
     <div class="container">
         <h1>Hello Everyone!</h1>
         <h1>Welcome to My Portfoilo!</h1>
-        <picture>
-            <source srcset="IMG_0010.jpg" media="(max-width: 400px)">
-            <source srcset="IMG_0010.jpg">
-            <img src="IMG_0010.jpg" alt="Me" style="width:auto;">
-          </picture>
     <p class="p1">I'm Ninah Fuller, and I'm thrilled to introduce you to my portfolio. I am a cybersecurity major and a senior at Kennesaw State University right now. I have accumulated a solid foundation in data analysis, artificial intelligence, and software development throughout the years. My academic accomplishments, extracurricular interests, and professional experiences that have influenced my abilities and career goals are all highlighted in my portfolio.
     </p>
     <style>
