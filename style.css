@@ -1,12 +1,13 @@
 html{
-  background: url(website3.jfif) no-repeat center fixed; 
+  background: url(website.jpg) no-repeat center fixed; 
   background-size: cover;
 }
 body {
+  background-color: pink;
   margin: 5;  
 }
 h1 {
-  color: sienna;
+  color: lightsalmon;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -14,14 +15,14 @@ h1 {
   margin-left: 80px;
 }
 h2 {
-  color: black;
+  color: lightseagreen;
   margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
 }
 p {
-  color: white;
+  color: pink;
   margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 150px;
