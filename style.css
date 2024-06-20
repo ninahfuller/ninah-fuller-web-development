@@ -5,6 +5,7 @@ body{
 
 h1 {
   color: indianred;
+  font-size: 80px;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -12,6 +13,7 @@ h1 {
   margin-left: 80px;
 }
 h2 {
+  font-size: 50px;
   color: salmon;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -20,6 +22,7 @@ h2 {
 }
 p {
   color: brown;
+  font-size: 30;
   margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 150px;
