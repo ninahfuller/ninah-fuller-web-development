@@ -30,5 +30,9 @@ p {
 }
 .p1 {
   font-family: monospace;
-  font-size: 30;
+  font-size: 20;
+}
+.p2 {
+  font-family: monospace;
+  font-size: 40;
 }
