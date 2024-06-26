@@ -48,6 +48,9 @@
         padding: 0;
         overflow: hidden;
         background-color: linen;
+        position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
       }
       
       li {
@@ -64,7 +67,14 @@
       
       li a:hover {
         background-color: seashell;
-      }   
+      } 
+      li a:hover:not(.active) {
+  background-color: white;
+}
+
+.active {
+  background-color: thistle;
+}    
       </style>  
       <ul>
         <li><a class="active" href="index.html">Home</a></li>
