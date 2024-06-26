@@ -1,50 +1,40 @@
-function validateForm() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const agree = document.getElementById("agree").checked;
-    const nameError = document.getElementById("name-error");
-    
-        const emailError = document.getElementById(
-        "email-error"
-    );
-        const subjectError = document.getElementById(
-        "subject-error"
-    );
-    const agreeError = document.getElementById(
-        "agree-error"
-    );
+// Script.js 
+function validate() { 
+	let name = 
+		document.getElementById("name").value; 
+	let subject = 
+		document.getElementById("subject").value; 
+	let phone = 
+		document.getElementById("phone").value; 
+	let email = 
+		document.getElementById("email").value; 
+	let message = 
+		document.getElementById("message").value; 
+	let error_message = 
+		document.getElementById("error_message"); 
 
-    nameError.textContent = "";
-    emailError.textContent = "";
-    subjectError.textContent = "";
-    agreeError.textContent = "";
+	error_message.style.padding = "10px"; 
 
-    let isValid = true;
+	let errors = []; 
 
-    if (name === "" || /\d/.test(name)) {
-        nameError.textContent =
-            "Please enter your name properly.";
-        isValid = false;
-    }
+	if (name.length < 5) { 
+		errors.push("Please Enter a valid Name");} 
+	if (subject.length < 10) { 
+		errors.push("Please Enter a Correct Subject");} 
+	if (isNaN(phone) || phone.length != 10) { 
+		errors.push("Please Enter a valid Phone Number");} 
+	if (email.indexOf("@") == -1 || email.length < 6) { 
+		errors.push( 
+			"Please Enter a valid Email");} 
+	if (message.length <= 40) { 
+		errors.push( 
+			"Please Enter More Than 40 Characters");} 
 
-    if (email === "" || !email.includes("@")) {
-        emailError.textContent =
-            "Please enter a valid email address.";
-        isValid = false;
-    }
-
-    if (subject === "") {
-        subjectError.textContent =
-            "Please select your course.";
-        isValid = false;
-    }
-
-    if (!agree) {
-        agreeError.textContent =
-            "Please agree to the above information.";
-        isValid = false;
-    }
-
-    return isValid;
-}
+	if (errors.length > 0) { 
+		error_message.innerHTML = 
+			errors.join("<br>"); 
+		return false;} 
+	else { 
+		alert( 
+			"Form Submitted Successfully!"); 
+		return true;}}
