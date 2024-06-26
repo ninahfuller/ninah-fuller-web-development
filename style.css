@@ -36,11 +36,11 @@ p {
   margin-left: 150px;
 }
 .p1 {
-  font-family: monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20;
 }
 .p2 {
-  font-family: monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 40;
 }
 .wrapper { 
