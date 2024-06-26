@@ -2,8 +2,6 @@
 function validate() { 
 	let name = 
 		document.getElementById("name").value; 
-	let subject = 
-		document.getElementById("subject").value; 
 	let phone = 
 		document.getElementById("phone").value; 
 	let email = 
@@ -19,8 +17,6 @@ function validate() {
 
 	if (name.length < 5) { 
 		errors.push("Please Enter a valid Name");} 
-	if (subject.length < 10) { 
-		errors.push("Please Enter a Correct Subject");} 
 	if (isNaN(phone) || phone.length != 10) { 
 		errors.push("Please Enter a valid Phone Number");} 
 	if (email.indexOf("@") == -1 || email.length < 6) { 
@@ -37,4 +33,5 @@ function validate() {
 	else { 
 		alert( 
 			"Form Submitted Successfully!"); 
-		return true;}}
+		return true;}
+    }
