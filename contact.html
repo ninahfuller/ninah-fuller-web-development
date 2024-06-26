@@ -11,8 +11,8 @@
         <div class="wrapper"> 
           <h2>Contact</h2> 
           <div id="error_message"> 
+            <form action="./index.php" method="get">
           </div> 
-          <form action="" 
                 id="myform" 
                 onsubmit="return validate();"> 
               <div class="input_field"> 
@@ -40,6 +40,8 @@
               </div> 
           </form> 
       </div> 
+    </form>
+
       <script src="./index.js"></script>    
         <style>
     ul {
@@ -72,10 +74,5 @@
         <li><a href="about.html">About</a></li>
       </ul>
     </div>
-    <form action="./index.php" method="get">
-      Name: <input type="text" name="name"><br>
-      E-mail: <input type="text" name="email"><br>
-      <input type="submit">
-      </form>
-    </body>
+        </body>
 </html>
