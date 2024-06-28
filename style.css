@@ -71,7 +71,7 @@ p {
   .input_field 
   input[type="text"], 
 .wrapper textarea { 
-  border: 1px solid gray; 
+  border: 1px solid mediumaquamarine; 
   width: 100%; 
   padding: 10px; 
 } 

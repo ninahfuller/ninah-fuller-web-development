@@ -33,15 +33,45 @@
       <img src="ninah.jpg" alt="Me" width="15" height="15">
     </div>
 </style>
+<style>
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 <body>
     <div class="container">
         <h1>ABOUT</h1>
-        <p class="p2"> Greetings, I am Ninah Cymone Fuller. I am born and raised in Atlanta, Georgia. I am a senior at Kennesaw State University, where I am pursuing a Bachelor of Science in cybersecurity. I attended technologically oriented schools throughout my academic career, which sparked my interest in computer science. In addition, I took part in a summer research program at Georgia Tech where I researched deep neural network adversarial attacks. My enthusiasm for network security has been cemented by this encounter. <br>
-
-          Outside of academics, I am passionate about travel, music and sports. I participated in multiple recitals and competitions over my six years of playing the clarinet in middle and high school. Also, before I was sixteen, I had visited several different nations. In addition, I've developed a fresh passion for sports viewing. I enjoy watching basketball, baseball, and football, but all I did was cheer and dance.<br>
+        <div class="row">
+          <div class="column">
+            <h2>Column</h2>
+            <p class="p2">Hello, my name is Ninah Cymone Fuller. I was born and raised in Atlanta, Georgia. I am a senior at Kennesaw State University, where I am pursuing a Bachelor of Science in Cybersecurity. I attended technologically oriented schools throughout my academic career, which sparked my interest in computer science. In addition, I took part in a summer research program at Georgia Tech where I researched deep neural network adversarial attacks. My enthusiasm for network security has been cemented by this encounter.</p>
+          </div>
           
-          My objective is to earn a Bachelor of Science in Cybersecurity from Kennesaw State University. I wish to obtain my CySA+ credential and further my network security education given my expertise in cybersecurity.
-          </p>
+          <div class="column">
+            <h2>Column</h2>
+            <p class="p2">Outside of academics, I am passionate about travel, music and sports. I participated in multiple recitals and competitions over my six years of playing the clarinet in middle and high school. Also, before I was sixteen, I had visited several different nations. In addition, I've developed a fresh passion for sports viewing. I enjoy watching basketball, baseball, and football, but all I did was cheer and dance.
+            </p>
+          </div>
+          
+          <div class="column">
+            <h2>Column</h2>
+            <p class="p2">My objective is to earn a Bachelor of Science in Cybersecurity from Kennesaw State University. I wish to obtain my CySA+ credential and further my network security education given my expertise in cybersecurity.</p>
+          </div>
+        </div>
         <style>
             ul {
                 list-style-type: none;
