@@ -8,47 +8,20 @@
     <title>CONTACT</title>
 </head>
 <body>
-  <div class="container mt-5 mb-5">
-    <h1 class="text-warning text-center"><b>Node.js Tutorial - How to Send an Email</b></h1>
-    <div class="col-md-6 mt-3 mb-3">
-        <div class="card">
-            <div class="card-header">Contact Form</div>
-            <div class="card-body">
+  <h2>HTML Forms</h2>
 
-                <form method="post" action="/send">
-                    <div class="mb-3">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" class="form-control" />
-                        <% if(errors && errors.name) { %>
-                        <span class="text-danger"><%= errors.name.msg %></span>
-                        <% } %>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" class="form-control" />
-                        <% if (errors && errors.email) { %>
-                        <span class="text-danger"><%= errors.email.msg %></span>
-                        <% } %>
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" class="form-control" />
-                        <% if (errors && errors.subject) { %>
-                        <span class="text-danger"><%= errors.subject.msg %></span>
-                        <% } %>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message">Message</label>
-                        <textarea name="message" class="form-control"></textarea>
-                        <% if(errors && errors.message) { %>
-                        <span class="text-danger"><%= errors.message.msg %></span>
-                        <% } %>
-                    </div>
-                    <button type="submit" class="btn btn-success">Send Message</button>
-                </form>
-
-            </div>
-        </div>
+  <form action="/index.php">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone"><br><br>
+    <label for="message">Message:</label><br>
+    <input type="text" id="message" name="message"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+</body>
         <style>
     ul {
         list-style-type: none;
@@ -82,5 +55,4 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-    </body>
 </html>
