@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 
-//middleware for parsing JSON in request body
 app.use(express.json());
 
 app.get('/', (request, response) => {
@@ -43,7 +42,7 @@ app.post('/send',
 				service : 'Gmail',
 				auth : {
 					user : 'fullerninah@gmail.com',
-					pass : 'NPooh2000'
+					pass : 'xzisnkbtisydmmas'
 				}
 			});
 
@@ -66,16 +65,24 @@ app.post('/send',
 			});
 		}
 });
+let transporter = nodemailer.createTransport({
+	host:  config.host,
+	port: config.port,
+	secure: false,
+	auth: {
+			user: config.user,
+			pass: config.pass
+	},
+	tls:{
+		rejectUnauthorized:false
+	}
+});
 
 app.get('/success', (request, response) => {
-
 	response.send('<h1>Your Message was Successfully Send!</h1>');
-
 });
 
 //start server
-app.listen(3000, () => {
-
-	console.log('Server started on port 3000');
-
+app.listen(port, () => {
+	console.log('Server started on port ' +port);
 });
