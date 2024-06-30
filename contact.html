@@ -9,52 +9,110 @@
     <title>CONTACT</title>
 </head>
 <style>
-  body {font-family: Georgia, 'Times New Roman', Times, serif;}
-  * {box-sizing: border-box;}
+ *{ margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    outline: none; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+} 
+   
+.wrapper { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 350px; 
+    width: 100%; 
+    background: linen; 
+    padding: 25px; 
+    border-radius: 5px; 
+   } 
   
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid linen;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
+.wrapper h2 { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: #332902; 
+} 
   
-  input[type=submit] {
-    background-color: mediumaquamarine;
-    color: linen;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.wrapper .input_field { 
+    margin-bottom: 10px; 
+} 
   
-  input[type=submit]:hover {
-    background-color: mediumaquamarine;
-  }
+.wrapper 
+    .input_field 
+    input[type="text"], 
+.wrapper textarea { 
+    border: 1px solid linen; 
+    width: 100%; 
+    padding: 10px; 
+} 
   
-  .container {
-    border-radius: 5px;
-    background-color: linen;
-    padding: 20px;
-  }
+.wrapper textarea { 
+    resize: none; 
+    height: 80px; 
+} 
+  
+.wrapper .btn input[type="submit"] { 
+    border: 0px; 
+    margin-top: 15px; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%; 
+    background: mediumaquamarine; 
+    color: #fcfbf7; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    font-weight: bold; 
+    border-radius: 25px; 
+    cursor: pointer; 
+} 
+  
+#error_message { 
+    margin-bottom: 20px; 
+    background: #fe8b8e; 
+    padding: 0px; 
+    text-align: center; 
+    font-size: 14px; 
+    transition: all 0.5s ease; 
+}
   </style>
 <body>
-  <h1>CONTACT</h1>
-  <form action="/index.php">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
-    <label for="email">Email:</label><br>
-    <input type="text" id="email" name="email"><br><br>
-    <label for="phone">Phone:</label><br>
-    <input type="text" id="phone" name="phone"><br><br>
-    <label for="message">Message:</label><br>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    <input type="submit" value="Submit">
-  </form> 
+  <div class="wrapper"> 
+    <h2>Contact us</h2> 
+    <div id="error_message"> 
+
+    </div> 
+    <form action="index.php" 
+          id="myform" 
+          onsubmit="return validate();"> 
+        <div class="input_field"> 
+            <input type="text" 
+                   placeholder="Name" 
+                   id="name"> 
+        </div> 
+        <div class="input_field"> 
+            <input type="text" 
+                   placeholder="Subject" 
+                   id="subject"> 
+        </div> 
+        <div class="input_field"> 
+            <input type="text" 
+                   placeholder="Email" 
+                   id="email"> 
+        </div> 
+        <div class="input_field"> 
+            <textarea placeholder="Message" 
+                      id="message"> 
+            </textarea> 
+        </div> 
+        <div class="btn"> 
+            <input type="submit"> 
+        </div> 
+    </form> 
+</div> 
+<script src="./index.js"></script> 
 </body>
         <style>
     ul {
