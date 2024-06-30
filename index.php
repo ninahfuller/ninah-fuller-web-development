@@ -4,11 +4,11 @@
 <body>  
 
 <?php
-$name = $phone = $email = $comment = "";
+$name = $subject = $email = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
-  $phone = test_input($_POST["phone"]);
+  $subject = test_input($_POST["subject"]);
   $email = test_input($_POST["email"]);
   $comment = test_input($_POST["comment"]);
 }
@@ -24,7 +24,7 @@ function test_input($data) {
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name">
   <br><br>
-  Phone: <input type="text" name="phone">
+  Subject: <input type="text" name="subject">
   <br><br>
   E-mail: <input type="text" name="email">
   <br><br>
@@ -37,7 +37,7 @@ function test_input($data) {
 echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
-echo $phone;
+echo $subject;
 echo "<br>";
 echo $email;
 echo "<br>";
